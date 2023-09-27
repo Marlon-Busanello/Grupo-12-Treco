@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Treco</title>
+  </head>
+  <header>
+    <nav class="nav">
+      <div>
+        <h1>Treco</h1>
+      </div>
+      <div>
+        <button id="colorButton" class="button_nav" onclick="showcolors()">
+          <img src="icone_seletor_de_cores.png" alt="icone da paleta" />
+        </button>
+      </div>
+    </nav>
+    <div id="change" class="colorometro">
+      <div class="colorometro_div">
+        <div class="color_bar">
+          <div
+            id="vermelho"
+            class="vermelho"
+            onclick="changeBackgroundColor('#f44336')"
+          ></div>
+          <div
+            id="azul"
+            class="azul"
+            onclick="changeBackgroundColor('#00ffff')"
+          ></div>
+          <div
+            class="branco"
+            id="branco"
+            onclick="changeBackgroundColor('#ffffff')"
+          ></div>
+          <div
+            id="roxo"
+            class="roxo"
+            onclick="changeBackgroundColor('#663399')"
+          ></div>
+          <div
+            id="verde"
+            class="verde"
+            onclick="changeBackgroundColor('#7fff00')"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <!-- Coluna principal -->
+    <section>
+      <div class="container_coluna">
+        <div class="container_header">
+          <h2 class="tituloColuna">Coluna 1</h2>
+          <button class="botaoExcoluna">  <!-- https://pictogrammers.com/library/mdi/icon/close-circle/ -->
+            <img
+              src="close-circle.svg"
+              alt="Botão para excluir a coluna inteira" 
+            />
+          </button>
+        </div>
+        <div class="tarefa">
+          <div class="tarefa_header">
+            <h3>Cartão 1</h3>
+            <button class="botaoExtarefa">
+              <img
+                src="close-circle.svg"
+                alt="Botão para excluir a coluna inteira"
+              />
+            </button>
+          </div>
+          <div class="tarefa_content"></div>
+          <!-- Div onde ficará todo o conteudo da tarefa -->
+          <div class="tarefa_footer">
+            <h3>00/00/00</h3>
+            <!-- Data da criação da tarefa -->
+          </div>
+        </div>
+        <div class="add_tarefa">
+          <button class="bt_addtarefa">
+            <img
+            src="plus-box-outline.svg"
+            alt="Botão para excluir a coluna inteira"
+            />   
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Coluna Botão para adicionar uma nova coluna-->
+    <secion>
+      <div class="container_add">
+        <button class="add_coluna">
+          <img
+            src="plus-box.svg"
+            alt="Botão para adicionar uma nova coluna"
+          />
+        </button>
+      </div>
+    </secion>
+  </body>
+  <footer class="footer">
+    <p>&copy; 2023 Treco</p>
+  </footer>
+</html>
