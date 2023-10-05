@@ -234,7 +234,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-style: solid;
+    
 }
 
 .add_coluna{
