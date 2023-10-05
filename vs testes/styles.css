@@ -237,6 +237,17 @@ footer {
     
 }
 
+.tarefa_footer{
+    width: 100% !important;
+    height: 30px;
+    border-radius: 0px 0px 10px 10px;
+    background: #6F6565;
+    position: absolute;
+    top: 100px;
+    justify-content: space-between;
+    font-size: 14px !important;
+}
+
 .add_coluna{
     position: absolute;
     width: 80px; /* Largura do botão */
