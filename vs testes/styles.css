@@ -2,6 +2,13 @@
     margin: 0;
 }
 
+.logo{
+
+    color: salmon;
+    align-items: start;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,6 +23,7 @@ nav {
     padding: 10px;
     display: flex; /* Usar o display flex para alinhar os itens */
     justify-content: space-between; /* Alinhar os itens ao espaço entre eles */
+    align-items: center;
 }
 
 /* Estilos CSS para o botão */
@@ -115,6 +123,9 @@ footer {
 }
 
 .botaoExtarefa{
+    position: absolute;
+    margin-left: 80%;
+
     width: 35px; /* Largura do botão */
     height: 30px; /* Altura do botão */
     border-radius: 50%; /* Bordas arredondadas para criar um botão redondo */
@@ -125,6 +136,12 @@ footer {
 }
 
 .tituloColuna{
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+.tituloTarefa{
+    position: absolute;
     margin-left: 25%;
     margin-top: 4%;
 }
@@ -140,6 +157,7 @@ footer {
 .coorometro_div{
     width: 200px;
     background-color: black;
+    cursor: pointer;
 }
 
 .vermelho{
@@ -148,6 +166,7 @@ footer {
     height: 25px;
     margin-left: 53%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .azul{
@@ -156,6 +175,7 @@ footer {
     height: 25px;
     margin-left: 53%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .verde{
@@ -164,6 +184,7 @@ footer {
     height: 25px;
     margin-left: 53%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .branco{
@@ -172,6 +193,7 @@ footer {
     height: 25px;
     margin-left: 53%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .roxo{
@@ -180,6 +202,7 @@ footer {
     height: 25px;
     margin-left: 53%;
     margin-top: 2%;
+    cursor: pointer;
 }
 
 .color_bar{
@@ -211,6 +234,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-style: solid;
 }
 
 .add_coluna{
@@ -224,13 +248,37 @@ footer {
     margin-top: 165px;  
 }
 
-.bt_addtarefa{
-    width: 60px; /* Largura do botão */
-    height: 60px; /* Altura do botão */
-    background-color: #6F6565; /* Cor de fundo do botão */
-    border: none; /* Remova a borda */
-    cursor: pointer;
-    margin-top: 183px;
-    margin-left: 70px;
-    background-size: cover;
+.add_tarefa{
+    background-color: #a7a7a7;
+    width: 85%;
+    height: 127px;
+    position: absolute;
+    top: 205px;
+    margin-left: -1px; 
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
+
+
+.bt_addtarefa{
+    background-color: #a7a7a7;
+    width: 35%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: none;
+    cursor: pointer;
+    
+ }
+
+ .img_btaddtarefa{
+    background-size: cover;
+    cursor: pointer;
+    text-align: center;
+ }
