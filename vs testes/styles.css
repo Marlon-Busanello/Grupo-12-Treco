@@ -244,17 +244,18 @@ footer {
 }
 
 .tarefa_footer{
-    display: inline;
+    display: inline-block;
     width: 100% !important;
     height: 30px;
     border-radius: 0px 0px 10px 10px;
     background: #6F6565;
     position: absolute;
     top: 100px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     font-size: 14px !important;
 }
+
 
 .add_coluna{
     position: absolute;
@@ -339,3 +340,4 @@ footer {
     flex-direction: row;
     align-items: start; /* Centralizar horizontalmente */
 }
+
