@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 * {
     margin: 0;
 }
@@ -6,6 +7,7 @@
 
     color: salmon;
     align-items: start;
+    font-family: Inter;
 }
 
 
@@ -58,9 +60,10 @@ footer {
 }
 
 .container_coluna {
+    display: flex;
     position: fixed;
-    top: 67px;
-    left: 10px;
+   top: 67px;
+    left: 20px;
     width: 200px;
     height: 75%;
     background-color: #333;
@@ -69,7 +72,7 @@ footer {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: row;
+   flex-direction: row;
     align-items: start; /* Centralizar horizontalmente */
 }
 
@@ -95,13 +98,14 @@ footer {
     height: 50px;
     border-radius: 20px 20px 0px 0px;
     background: #6F6565;
+    align-items: center;
     position: absolute;
     top: 0px;
     margin-left: -20px; 
     text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* Estilos CSS para o seletor de cores */
@@ -136,15 +140,17 @@ footer {
 }
 
 .tituloColuna{
-    margin-left: 25%;
-    margin-top: 4%;
+    margin-left: 0%;
+    margin-top: 0%;
 }
 
 .tituloTarefa{
     position: absolute;
-    margin-left: 25%;
-    margin-top: 4%;
+    margin-left: 0%;
+    margin-top: 0%;
 }
+
+/*Funcao para altera  cor do fundo */
 
 .colorometro{
     color: white;
@@ -208,8 +214,7 @@ footer {
 .color_bar{
     width: 100px;
 }
-
-.tarefa{
+/* Colunas e tarefas */.tarefa{
     background-color: #ffffff;
     width: 85%;
     height: 120px;
@@ -233,11 +238,13 @@ footer {
     text-align: right;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .tarefa_footer{
+    display: inline;
     width: 100% !important;
     height: 30px;
     border-radius: 0px 0px 10px 10px;
@@ -245,6 +252,7 @@ footer {
     position: absolute;
     top: 100px;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px !important;
 }
 
@@ -293,3 +301,41 @@ footer {
     cursor: pointer;
     text-align: center;
  }
+
+ /*Coluna  Fazendo */
+
+.container_coluna_fazendo {
+    display: flex;
+    position: fixed;
+    top: 67px;
+    left: 650px;
+    width: 200px;
+    height: 75%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: start; /* Centralizar horizontalmente */
+}
+
+/*Coluna Concluido*/
+
+.container_coluna_concluido {
+    display: flex;
+    position: fixed;
+    top: 67px;
+    left: 1275px;
+    width: 200px;
+    height: 75%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: start; /* Centralizar horizontalmente */
+}
