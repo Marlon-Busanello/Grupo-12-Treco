@@ -1,108 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="script.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treco</title>
-  </head>
-  <header>
-    <nav class="nav">
-      <div>
-        <h1>Treco</h1>
-      </div>
-      <div>
-        <button id="colorButton" class="button_nav" onclick="showcolors()">
-          <img src="icone_seletor_de_cores.png" alt="icone da paleta" />
-        </button>
-      </div>
-    </nav>
-    <div id="change" class="colorometro">
-      <div class="colorometro_div">
-        <div class="color_bar">
-          <div
-            id="vermelho"
-            class="vermelho"
-            onclick="changeBackgroundColor('#f44336')"
-          ></div>
-          <div
-            id="azul"
-            class="azul"
-            onclick="changeBackgroundColor('#00ffff')"
-          ></div>
-          <div
-            class="branco"
-            id="branco"
-            onclick="changeBackgroundColor('#ffffff')"
-          ></div>
-          <div
-            id="roxo"
-            class="roxo"
-            onclick="changeBackgroundColor('#663399')"
-          ></div>
-          <div
-            id="verde"
-            class="verde"
-            onclick="changeBackgroundColor('#7fff00')"
-          ></div>
-        </div>
-      </div>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <!-- Nav-bar-->
+<header class="barra-de-navegação">
+
+    <h1 class="logo">Treco</h1> <!-- Logo-->
+    
+    <!--Função mudar de cor o background -->
+
+    <button onclick="mostrarOpcoes()" class="Alterar-cor"><img src="css/img/icone_seletor_de_cores.png" alt="Icone de uma paleta de cores"></button>
+    <div id="opcoes" style="display: none;" class="Conteiner-cores">
+        <button onclick="mudarCor('#C0C0C0')" class="quadrado-coresCZ" ></button>
+        <button onclick="mudarCor('#228B22')" class="quadrado-coresVD" ></button>
+        <button onclick="mudarCor('#DAA520')" class="quadrado-coresA" ></button>
+        <button onclick="mudarCor( '#B22222')" class="quadrado-coresVM"></button>
+        <button onclick="mudarCor('#4B0082')" class="quadrado-coresR"></button>
     </div>
-  </header>
-  <body>
-    <!-- Coluna principal -->
-    <section>
-      <div class="container_coluna">
-        <div class="container_header">
-          <h2 class="tituloColuna">Coluna 1</h2>
-          <button class="botaoExcoluna">  <!-- https://pictogrammers.com/library/mdi/icon/close-circle/ -->
-            <img
-              src="close-circle.svg"
-              alt="Botão para excluir a coluna inteira" 
-            />
-          </button>
+
+</header>
+ <!--Coluna a  fazer -->
+
+
+<!-- Função adionar tarefa -->
+<section class="background"> 
+
+        <div class="container_coluna" id="Coluna-A-Fazer" >
+
+
+            <div class="titulo-colunas">
+                <h1>A fazer</h1>
+            </div>
+           
+            <button id="Add-Tarefa-Fazer" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="Simbolo de adição" class="img-botao"></button>
+
+            <div id="Nova-Tarefa-Fazer" style="display: none;">
+                <input type="text" id="Nome-Tarefa-Fazer" placeholder="Nome da tarefa" class="">
+                <button onclick="adicionarTarefa('Tarefas-Criadas-Fazer', 'Nome-Tarefa-Fazer', 'Nova-Tarefa-Fazer')">Adicionar</button>
+            </div>
+     
+
+            <!-- Areas para as tarefas adicionadas coluna a fazer -->
+            <div id="Tarefas-Criadas-Fazer" class="Tarefa">
+
+            </div>
         </div>
-        <div class="tarefa">
-          <div class="tarefa_header">
-            <h3>Cartão 1</h3>
-            <button class="botaoExtarefa">
-              <img
-                src="close-circle.svg"
-                alt="Botão para excluir a coluna inteira"
-              />
-            </button>
-          </div>
-          <div class="tarefa_content"></div>
-          <!-- Div onde ficará todo o conteudo da tarefa -->
-          <div class="tarefa_footer">
-            <h3>00/00/00</h3>
-            <!-- Data da criação da tarefa -->
-          </div>
+
+
+          <!-- Coluna Fazendo -->
+
+
+    <div class="container_coluna" id="Coluna-Fazendo">
+
+
+        <div class="titulo-colunas">
+            <h1>Fazendo</h1>
         </div>
-        <div class="add_tarefa">
-          <button class="bt_addtarefa">
-            <img
-            src="plus-box-outline.svg"
-            alt="Botão para excluir a coluna inteira"
-            />   
-          </button>
+        
+        <!-- Função adionar tarefa -->
+        
+        <button id="Add-Tarefa-Fazendo" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="botão de adição" class="img-botao"></button>
+        <div id="Nova-Tarefa-Fazendo" style="display: none;">
+            <input type="text" id="Nome-Tarefa-Fazendo" placeholder="Nome da tarefa">
+            <button onclick="adicionarTarefa('Tarefas-Criadas-Fazendo', 'Nome-Tarefa-Fazendo', 'Nova-Tarefa-Fazendo')">Adicionar</button>
         </div>
-      </div>
-    </section>
-    <!-- Coluna Botão para adicionar uma nova coluna-->
-    <secion>
-      <div class="container_add">
-        <button class="add_coluna">
-          <img
-            src="plus-box.svg"
-            alt="Botão para adicionar uma nova coluna"
-          />
-        </button>
-      </div>
-    </secion>
-  </body>
-  <footer class="footer">
-    <p>&copy; 2023 Treco</p>
-  </footer>
+
+
+        <!-- Areas para as tarefas adicionadas coluna fazendo -->
+        <div id="Tarefas-Criadas-Fazendo">
+
+        </div>
+    </div>
+
+
+      <!-- Coluna Concluido -->
+
+
+    <div class="container_coluna" id="Conluna-Concluido">
+
+
+        <div class="titulo-colunas" >
+            <h1>Concluido</h1>
+        </div>
+        
+        <!-- Função adionar tarefa -->
+        
+        <button id="Add-Tarefa-Concluido" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="simbolo de adição" class="img-botao"></button>
+        <div id="Novas-Tarefas_Concluida" style="display: none;">
+            <input type="text" id="Nome-Tarefa-concluida" placeholder="Nome da tarefa">
+            <button onclick="adicionarTarefa('Tarefas-Criadas-Concluido', 'Nome-Tarefa-concluida', 'Novas-Tarefas_Concluida')">Adicionar</button>
+        </div>
+
+
+
+        <!-- Areas para as tarefas adicionadas coluna concluido -->
+        <div id="Tarefas-Criadas-Concluido">
+
+        </div>
+
+
+ <script src="js/script.js"></script>
+</body>
 </html>
