@@ -1,111 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treco</title>
-    
-    <link rel="stylesheet" href="css/style.css">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-   
-    <!-- Nav-bar-->
-<header class="barra-de-navegação">
 
-    <h1 class="logo">Treco</h1> <!-- Logo-->
     
-    <!--Função mudar de cor o background -->
-
-    <button onclick="mostrarOpcoes()" class="Alterar-cor"><img src="css/img/icone_seletor_de_cores.png" alt="Icone de uma paleta de cores"></button>
-    <div id="opcoes" style="display: none;" class="Conteiner-cores">
-        <button onclick="mudarCor('#C0C0C0')" class="quadrado-coresCZ" ></button>
-        <button onclick="mudarCor('#228B22')" class="quadrado-coresVD" ></button>
-        <button onclick="mudarCor('#DAA520')" class="quadrado-coresA" ></button>
-        <button onclick="mudarCor( '#B22222')" class="quadrado-coresVM"></button>
-        <button onclick="mudarCor('#4B0082')" class="quadrado-coresR"></button>
-    </div>
-
-</header>
- <!--Coluna a  fazer -->
-
-
-<!-- Função adionar tarefa -->
-<section class="background"> 
-
-        <div class="container_coluna" id="Coluna-A-Fazer" >
-
-
-            <div class="titulo-colunas">
-                <h1>A fazer</h1>
-            </div>
-           
-            <button id="Add-Tarefa-Fazer" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="Simbolo de adição" class="img-botao"></button>
-
-            <div id="Nova-Tarefa-Fazer" style="display: none;">
-                <input type="text" id="Nome-Tarefa-Fazer" placeholder="Nome da tarefa" class="">
-                <button onclick="adicionarTarefa('Tarefas-Criadas-Fazer', 'Nome-Tarefa-Fazer', 'Nova-Tarefa-Fazer')">Adicionar</button>
-            </div>
-     
-
-            <!-- Areas para as tarefas adicionadas coluna a fazer -->
-            <div id="Tarefas-Criadas-Fazer" class="Tarefa">
-
-            </div>
-        </div>
-
-
-          <!-- Coluna Fazendo -->
-
-
-    <div class="container_coluna" id="Coluna-Fazendo">
-
-
-        <div class="titulo-colunas">
-            <h1>Fazendo</h1>
-        </div>
-        
-        <!-- Função adionar tarefa -->
-        
-        <button id="Add-Tarefa-Fazendo" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="botão de adição" class="img-botao"></button>
-        <div id="Nova-Tarefa-Fazendo" style="display: none;">
-            <input type="text" id="Nome-Tarefa-Fazendo" placeholder="Nome da tarefa">
-            <button onclick="adicionarTarefa('Tarefas-Criadas-Fazendo', 'Nome-Tarefa-Fazendo', 'Nova-Tarefa-Fazendo')">Adicionar</button>
-        </div>
-
-
-        <!-- Areas para as tarefas adicionadas coluna fazendo -->
-        <div id="Tarefas-Criadas-Fazendo">
-
+    <header>
+        <nav class="Barra">
+            
+            <h1 class="Logo">Treco</h1>
+    <div>
+        <button id="corFundoButton" onclick="mostrarOpcoesCores()">Escolher Cor de Fundo</button>
+        <div id="opcoesCores" class="opcoes-cores">
+            <div class="cor" style="background-color: white;" onclick="mudarCorFundo('white')"></div>
+            <div class="cor" style="background-color: lightblue;" onclick="mudarCorFundo('lightblue')"></div>
+            <div class="cor" style="background-color: lightgreen;" onclick="mudarCorFundo('lightgreen')"></div>
+            <div class="cor" style="background-color: lightpink;" onclick="mudarCorFundo('lightpink')"></div>
+            <div class="cor" style="background-color: lightcoral;" onclick="mudarCorFundo('lightcoral')"></div>
         </div>
     </div>
 
+        </nav>
+    </header>
 
-      <!-- Coluna Concluido -->
-
-
-    <div class="container_coluna" id="Conluna-Concluido">
-
-
-        <div class="titulo-colunas" >
-            <h1>Concluido</h1>
-        </div>
+    <div class="backGround">
+    <div class="coluna" id="coluna1" ondrop="soltarTarefa(event, 1)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
         
-        <!-- Função adionar tarefa -->
-        
-        <button id="Add-Tarefa-Concluido" class="botao-add-tarefa"><img src="css/img/plus-box-outline.svg" alt="simbolo de adição" class="img-botao"></button>
-        <div id="Novas-Tarefas_Concluida" style="display: none;">
-            <input type="text" id="Nome-Tarefa-concluida" placeholder="Nome da tarefa">
-            <button onclick="adicionarTarefa('Tarefas-Criadas-Concluido', 'Nome-Tarefa-concluida', 'Novas-Tarefas_Concluida')">Adicionar</button>
-        </div>s
-
-
-
-        <!-- Areas para as tarefas adicionadas coluna concluido -->
-        <div id="Tarefas-Criadas-Concluido">
+        <h2>A Fazer</h2>
 
         </div>
+        <div>
+        <input type="text" id="taskName1" placeholder="Nome da tarefa">
+        <button onclick="adicionarTarefa(1)">Adicionar Tarefa</button>
+        <div id="listaDeTarefas1">
+            </div>
+            <!-- Tarefas serão adicionadas aqui -->
+        </div>
+    </div>
 
+    <div class="coluna" id="coluna2" ondrop="soltarTarefa(event, 2)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
+        
+            <h2>Fazendo</h2>
+    
+            </div>
+        <input type="text" id="taskName2" placeholder="Nome da tarefa">
+        <button onclick="adicionarTarefa(2)">Adicionar Tarefa</button>
+        <div id="listaDeTarefas2">
+            <!-- Tarefas serão adicionadas aqui -->
+        </div>
+    </div>
 
- <script src="js/script.js"></script>
+    <div class="coluna" id="coluna3" ondrop="soltarTarefa(event, 3)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
+        
+            <h2>Concluido</h2>
+    
+            </div>
+        <input type="text" id="taskName3" placeholder="Nome da tarefa">
+        <button onclick="adicionarTarefa(3)">Adicionar Tarefa</button>
+        <div id="listaDeTarefas3">
+            <!-- Tarefas serão adicionadas aqui -->
+        </div>
+    </div>
+</div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

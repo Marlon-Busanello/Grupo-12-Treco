@@ -1,110 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap'); /* Adiciona a fonte da logo*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
-
-/*Nave de bar*/
-
-.barra-de-navegação{
-    background-color: #6F6565;
+.backGround{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    width: 100%;
 }
 
-/*Logo*/
-.logo{
-    color: #FA7878;
-    font-family: 'Inter';
-    margin: 0.5rem;
-}
-
-/*Botão de mudar de cor */
-
-.Alterar-cor{
-    position: fixed;
-    margin-left: 97%;
-    width: 40px; /* Largura do botão */
-    height: 40px; /* Altura do botão */
-    border-radius: 50%; /* Bordas arredondadas para criar um botão redondo */
-    background-color: #333; /* Cor de fundo do botão */
-    border: none; /* Remova a borda */
-    cursor: pointer;
-    overflow: hidden; /* Ocultar conteúdo que extrapolar os limites do botão */
-    display: flex,end; /* Permitir que a imagem e o input fiquem lado a lado */
-    justify-content: center; /* Centralizar horizontalmente */
-    align-items: center; /* Centralizar verticalmente */
-   
-}
-
-.Alterar-cor img{
-    width: 25px; /* Largura da imagem */
-    height: auto; /* Altura automática para manter a proporção */
-    align-items: center;
-}
-
-.Conteiner-cores{
-display: flex;
-width: 11%;
-height: 30px;
-margin: 5px;
-}
-
-.quadrado-coresR{
-    width: 30px;
-    height: 30px;
-    background-color: #4B0082;
-    border: none;
-    cursor: pointer;
-}
-.quadrado-coresVD{
-    width: 30px;
-    height: 30px;
-    background-color: #228B22;
-    border: none;
-    cursor: pointer;
-}
-.quadrado-coresA{
-    width: 30px;
-    height: 30px;
-    background-color: #DAA520;
-    border: none;
-    cursor: pointer;
-}
-.quadrado-coresVM{
-    width: 30px;
-    height: 30px;
-    background-color: #8B0000;
-    border: none;
-    cursor: pointer;
-}
-.quadrado-coresCZ{
-    width: 30px;
-    height: 30px;
-    background-color: #C0C0C0;
-    border: none;
-    cursor: pointer;
-}
-
-
-/*BG*/
-
-.background{
-display: flex;
-justify-content: space-between;
-
-
-}
-
-/* -_-_-_-_-_ Fim nav -_-_-_-_-_ */
-
-/*Coluna A Fazer */
-
-.container_coluna{
+/* Estilo para as colunas */
+.coluna {
     margin-top: 3rem;
     margin: 3rem;
     display: flexbox;
@@ -113,50 +19,85 @@ justify-content: space-between;
     background-color: #4D4545;
     border: 1px solid black ;
     border-radius: 20px;
-  
-    
 }
 
-.titulo-colunas{
-    background-color:  #6F6565;
+
+/*Titulp colunas*/
+.tituloColunas{
+
+background-color:  #6F6565;
     display: flex;
     height: 50px;
     align-items: center;
     justify-content: center;
     border-radius: 20px 20px 0px 0px;
-    
-    
-    
-}
-
-
-/* Bottoe de adcionar tarefa*/
-
-.botao-add-tarefa{
-        background-color: #D9D9D9;
-        height: 80px;
-        width:340px;
-        border-radius: 10px;
-        margin: 5px;
-        cursor: pointer;
-        }
-
-.img-botao{
-    height: 40px;
-    width: 40px;
 
 }
 
+/*Nav-Bar*/
+.Barra {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: auto;
+height: 50px;
+background-color:#6F6565 ;
+
+}
+
+.Logo{
+    color: #FA7878;
+    font-family: 'Inter';
+    margin: 1%;
+    font-size: 35px;
+}
+
+
+
+/* Estilo para as opções de cores */
+.opcoes-cores {
+    display: none;
+    margin-top: 10px;
+}
+
+.cor {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+
+/*Tarefas */
 .tarefa {
-   display: flexbox;
-   border: 1px solid #ccc;
-   padding: 10px;
-   margin: 5px;
-   width: 340;
-   background-color: #D9D9D9
+    background-color: #D9D9D9;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    padding: 10px;
+    margin: 1%;
+    position: relative;
+    cursor: pointer;
 }
 
-#listaDeTarefas {
-    width: 340px;
-    margin: 5px;
+.excluir-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para a coluna de tarefas */
+.tarefa-textarea {
+    width: 100%;
+}
+
+
+.cabeçalho{
+    background-color: #FA7878;
+    margin: 1%;
 }
