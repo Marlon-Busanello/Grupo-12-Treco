@@ -9,31 +9,6 @@
     justify-content: space-between;
 }
 
-/* Estilo para as colunas */
-.coluna {
-    margin-top: 3rem;
-    margin: 3rem;
-    display: flexbox;
-    width: 350px;
-    height: 700px;
-    background-color: #4D4545;
-    border: 1px solid black ;
-    border-radius: 20px;
-}
-
-
-/*Titulp colunas*/
-.tituloColunas{
-
-background-color:  #6F6565;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px 20px 0px 0px;
-
-}
-
 /*Nav-Bar*/
 .Barra {
 display: flex;
@@ -54,20 +29,80 @@ background-color:#6F6565 ;
 
 
 
-/* Estilo para as opções de cores */
+/* Area da funcao de alterar cor de fundo*/
+.conteinerCores{
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 50px;
+width: 350%;
+
+
+}
+.botaoCores{
+ 
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #333; 
+    border: none; 
+    cursor: pointer;
+    overflow: hidden; 
+    display: flex,end; 
+    justify-content: center; 
+    align-items: center;
+   
+}
+
+.imgBotao-cores{
+    width: 25px;
+    height: auto; 
+    align-items: center;
+}
+
 .opcoes-cores {
-    display: none;
-    margin-top: 10px;
+    display: inline-flex;
+    height: 50px;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .cor {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 1%;
     display: inline-block;
     border: 2px solid #000;
     cursor: pointer;
 }
+
+
+
+.coluna { /* Colunas */
+    margin-top: 3rem;
+    margin: 3rem;
+    display: flexbox;
+    width: 350px;
+    height: 700px;
+    background-color: #4D4545;
+    border: 1px solid black ;
+    border-radius: 20px;
+}
+
+
+.tituloColunas{ /*Titulo das colunas*/
+
+    background-color:  #6F6565;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px 20px 0px 0px;
+    
+    }
+
 
 
 /*Tarefas */
@@ -76,12 +111,18 @@ background-color:#6F6565 ;
     border: 1px solid #ccc;
     border-radius:5px;
     padding: 10px;
-    margin: 1%;
+    margin: 2%;
     position: relative;
     cursor: pointer;
 }
 
-.excluir-button {
+.tituloTarefas{ /*Titulo tarefas*/
+    background-color: #6F6565;
+    width: auto;
+    height: auto;
+}
+
+.botaoExcluir {
     position: absolute;
     top: 5px;
     right: 5px;

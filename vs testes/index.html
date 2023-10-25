@@ -11,8 +11,8 @@
         <nav class="Barra">
             
             <h1 class="Logo">Treco</h1>
-    <div>
-        <button id="corFundoButton" onclick="mostrarOpcoesCores()">Escolher Cor de Fundo</button>
+    <div class="conteinerCores">
+        <button id="corFundoButton" onclick="mostrarOpcoesCores()" class="botaoCores"><img src="css/img/icone_seletor_de_cores.png" alt="Imagem de um palheta de tinta" class="imgBotao-cores"></button>
         <div id="opcoesCores" class="opcoes-cores">
             <div class="cor" style="background-color: white;" onclick="mudarCorFundo('white')"></div>
             <div class="cor" style="background-color: lightblue;" onclick="mudarCorFundo('lightblue')"></div>
@@ -35,9 +35,10 @@
         <div>
         <input type="text" id="taskName1" placeholder="Nome da tarefa">
         <button onclick="adicionarTarefa(1)">Adicionar Tarefa</button>
-        <div id="listaDeTarefas1">
+
+        <div id="listaDeTarefas1"><!-- Div das tarefas criadas ou movidas para o a fazer-->
             </div>
-            <!-- Tarefas serão adicionadas aqui -->
+          
         </div>
     </div>
 
@@ -49,9 +50,10 @@
             </div>
         <input type="text" id="taskName2" placeholder="Nome da tarefa">
         <button onclick="adicionarTarefa(2)">Adicionar Tarefa</button>
-        <div id="listaDeTarefas2">
-            <!-- Tarefas serão adicionadas aqui -->
+        
+        <div id="listaDeTarefas2"><!-- Div das tarefas criadas ou movidas para o fazendo-->
         </div>
+
     </div>
 
     <div class="coluna" id="coluna3" ondrop="soltarTarefa(event, 3)" ondragover="permitirSoltar(event)">
@@ -62,9 +64,10 @@
             </div>
         <input type="text" id="taskName3" placeholder="Nome da tarefa">
         <button onclick="adicionarTarefa(3)">Adicionar Tarefa</button>
-        <div id="listaDeTarefas3">
-            <!-- Tarefas serão adicionadas aqui -->
+
+        <div id="listaDeTarefas3"><!-- Div das tarefas criadas ou movidas para o concluido-->
         </div>
+
     </div>
 </div>
 
