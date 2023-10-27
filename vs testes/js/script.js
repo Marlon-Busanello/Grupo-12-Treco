@@ -34,7 +34,7 @@ function adicionarTarefa(coluna) { /*  Funcao para criar tarefas */
         taskElement.setAttribute("data-task-id", taskId);
 
         
-        var tituloDiv = document.createElement("div"); 
+        var tituloDiv = document.createElement("nav"); 
         tituloDiv.className = "tituloTarefas";
         taskElement.appendChild(tituloDiv);
 
@@ -49,7 +49,7 @@ function adicionarTarefa(coluna) { /*  Funcao para criar tarefas */
 
         var excluirButton = document.createElement("button");
         excluirButton.className = "botaoExcluir";
-        excluirButton.textContent = "Excluir";
+        excluirButton.textContent = "x";
         excluirButton.addEventListener("click", function () {
             if (confirm("Tem certeza de que deseja excluir esta tarefa?")) {
                 taskElement.remove();
@@ -104,10 +104,13 @@ function carregarTarefasSalvas(coluna) { /* Funcao de carregar tarefas criadas a
             taskElement.ondragstart = function (event) {
                 event.dataTransfer.setData("text/plain", event.target.getAttribute("data-task-id"));
             };
-
+            var tituloNav = document.createElement("nav");
+            tituloNav.className = "tituloTarefas";
+            taskElement.appendChild(tituloNav);
+    
             var nomeElement = document.createElement("h3");
             nomeElement.textContent = tarefa.nome;
-            taskElement.appendChild(nomeElement);
+            tituloNav.appendChild(nomeElement);
 
             var descricaoElement = document.createElement("textarea");
             descricaoElement.className = "tarefa-textarea";
@@ -117,7 +120,7 @@ function carregarTarefasSalvas(coluna) { /* Funcao de carregar tarefas criadas a
 
             var excluirButton = document.createElement("button");
             excluirButton.className = "botaoExcluir";
-            excluirButton.textContent = "Excluir";
+            excluirButton.textContent = "X";
             excluirButton.addEventListener("click", function () {
                 if (confirm("Tem certeza de que deseja excluir esta tarefa?")) {
                     taskElement.remove();
@@ -138,7 +141,7 @@ function carregarTarefasSalvas(coluna) { /* Funcao de carregar tarefas criadas a
 }
 
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function () { /*Chama carregar tarefas e carrega cor bg */
     for (let coluna = 1; coluna <= 3; coluna++) {
         carregarTarefasSalvas(coluna);
     }
@@ -170,21 +173,11 @@ function soltarTarefa(event, coluna) { /* Funcao para larga tarefa  */
     var tarefa = document.querySelector(`.tarefa[data-task-id="${data}"]`);
     if (tarefa) {
         var colunaAnterior = tarefa.parentElement.id.match(/\d+/)[0];
-        tarefa.querySelector(".botaoExcluir").remove();
-        tarefa.ondragstart = null;
+        
         document.getElementById(`listaDeTarefas${coluna}`).appendChild(tarefa);
         salvarTarefas(coluna);
         salvarTarefas(colunaAnterior);
-        var excluirButton = document.createElement("button");
-        excluirButton.className = "botaoExcluir";
-        excluirButton.textContent = "Excluir";
-        excluirButton.addEventListener("click", function () {
-            if (confirm("Tem certeza de que deseja excluir esta tarefa?")) {
-                tarefa.remove();
-                salvarTarefas(coluna);
-            }
-        });
-        tarefa.appendChild(excluirButton);
+       
     }
 }
 
