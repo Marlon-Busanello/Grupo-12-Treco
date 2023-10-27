@@ -30,15 +30,8 @@ background-color:#6F6565 ;
 
 
 /* Area da funcao de alterar cor de fundo*/
-.conteinerCores{
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 50px;
-width: 350%;
 
 
-}
 .botaoCores{
  
     width: 40px;
@@ -48,9 +41,10 @@ width: 350%;
     border: none; 
     cursor: pointer;
     overflow: hidden; 
-    display: flex,end; 
+    display: flex; 
     justify-content: center; 
     align-items: center;
+    margin: 1%;
    
 }
 
@@ -60,22 +54,24 @@ width: 350%;
     align-items: center;
 }
 
-.opcoes-cores {
-    display: inline-flex;
-    height: 50px;
-    width: 350px;
-    align-items: center;
-    justify-content: space-between;
-    
+/* Estilo para a barra de cores */
+#opcoesCores {
+    display: none;
+    width: auto;
+    height: 30px;
+    margin: 2%;
 }
 
-.cor {
+.opcaoCor {
     width: 30px;
     height: 30px;
-    margin-right: 1%;
     display: inline-block;
-    border: 2px solid #000;
     cursor: pointer;
+    align-items: center;
+}
+
+#mostrarCores {
+    display: block;
 }
 
 

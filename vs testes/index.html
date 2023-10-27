@@ -11,15 +11,16 @@
         <nav class="Barra">
             
             <h1 class="Logo">Treco</h1>
-    <div class="conteinerCores">
-        <button id="corFundoButton" onclick="mostrarOpcoesCores()" class="botaoCores"><img src="css/img/icone_seletor_de_cores.png" alt="Imagem de um palheta de tinta" class="imgBotao-cores"></button>
-        <div id="opcoesCores" class="opcoes-cores">
-            <div class="cor" style="background-color: white;" onclick="mudarCorFundo('white')"></div>
-            <div class="cor" style="background-color: lightblue;" onclick="mudarCorFundo('lightblue')"></div>
-            <div class="cor" style="background-color: lightgreen;" onclick="mudarCorFundo('lightgreen')"></div>
-            <div class="cor" style="background-color: lightpink;" onclick="mudarCorFundo('lightpink')"></div>
-            <div class="cor" style="background-color: lightcoral;" onclick="mudarCorFundo('lightcoral')"></div>
-        </div>
+            <div id="opcoesCores">
+                <div class="opcaoCor" style="background-color: red;" onclick="mudarCorFundo('red')"></div>
+                <div class="opcaoCor" style="background-color: green;" onclick="mudarCorFundo('green')"></div>
+                <div class="opcaoCor" style="background-color: blue;" onclick="mudarCorFundo('blue')"></div>
+                <div class="opcaoCor" style="background-color: yellow;" onclick="mudarCorFundo('yellow')"></div>
+                <div class="opcaoCor" style="background-color: orange;" onclick="mudarCorFundo('orange')"></div>
+            </div>
+        
+            <button id="mostrarCores" onclick="mostrarOpcoesCores()" class="botaoCores"><img src="css/img/icone_seletor_de_cores.png" alt="" class="imgBotao-cores"></button>
+        
     </div>
 
         </nav>

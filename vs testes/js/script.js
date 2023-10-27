@@ -1,18 +1,22 @@
 
-function mostrarOpcoesCores() { /* Botao de alteras cor de fundo  */
+
+ function mostrarOpcoesCores() { /*Botao de mostra paleta */
     var opcoesCores = document.getElementById("opcoesCores");
+    var mostrarCores = document.getElementById("mostrarCores");
     if (opcoesCores.style.display === "block") {
         opcoesCores.style.display = "none";
+        mostrarCores.style.display = "block";
     } else {
         opcoesCores.style.display = "block";
+        mostrarCores.style.display = "none";
     }
 }
 
 
-function mudarCorFundo(cor) { /* Muda cor de fundo e salva ela */
+function mudarCorFundo(cor) { /*Salva cor de fundo */
     document.body.style.backgroundColor = cor;
-    // Salvar a cor de fundo no armazenamento local
     localStorage.setItem("corFundo", cor);
+    mostrarOpcoesCores();
 }
 
 function adicionarTarefa(coluna) { /*  Funcao para criar tarefas */
@@ -134,9 +138,25 @@ function carregarTarefasSalvas(coluna) { /* Funcao de carregar tarefas criadas a
 }
 
 
-for (let coluna = 1; coluna <= 3; coluna++) { /* Carrega as tarefas em suas respectivas colunas */
-    carregarTarefasSalvas(coluna);
-}
+window.addEventListener('load', function () {
+    for (let coluna = 1; coluna <= 3; coluna++) {
+        carregarTarefasSalvas(coluna);
+    }
+
+    // Carregar a cor de fundo
+    const corFundo = localStorage.getItem("corFundo");
+    if (corFundo) {
+        document.body.style.backgroundColor = corFundo;
+    }
+
+    // Carregar a cor da tarefa
+    const corTarefa = localStorage.getItem("corTarefa");
+    if (corTarefa) {
+        document.querySelectorAll(".titulo-tarefa").forEach(function (nav) {
+            nav.style.backgroundColor = corTarefa;
+        });
+    }
+});
 
 
 function permitirSoltar(event) {/* Funcao para mover tarefas */
