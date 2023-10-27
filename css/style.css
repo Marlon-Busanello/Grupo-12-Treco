@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.backGround{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Nav-Bar*/
+.Barra {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: auto;
+height: 50px;
+background-color:#6F6565 ;
+
+}
+
+.Logo{
+    color: #FA7878;
+    font-family: 'Inter';
+    margin: 1%;
+    font-size: 35px;
+}
+
+
+
+/*   A  rea da funcao de alterar cor de fundo     */
+
+
+.botaoCores{
+ 
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #333; 
+    border: none; 
+    cursor: pointer;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 1%;
+   
+}
+
+.imgBotao-cores{
+    width: 25px;
+    height: auto; 
+    align-items: center;
+}
+
+
+#opcoesCores {
+    display: none;
+    width: auto;
+    height: 30px;
+    margin: 2%;
+}
+
+.opcaoCor {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+}
+
+#mostrarCores {
+    display: block;
+}
+
+
+/*       Colunas        */
+.coluna { 
+    margin-top: 3rem;
+    margin: 3rem;
+    display: flexbox;
+    width: 350px;
+    height: 700px;
+    background-color: #4D4545;
+    border: 1px solid black ;
+    border-radius: 20px;
+}
+
+.tituloColunas{ /*Titulo das colunas*/
+
+    background-color:  #6F6565;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px 20px 0px 0px;
+        color: whitesmoke;
+        font-family: 'Inter';
+    
+    }
+
+
+
+/*      Tarefas             */
+
+.addTarefa{
+    display: flex;
+    height: 95%;
+    width: 95%px;
+    margin: 2%;
+    margin-top: 5%;
+    background-color:#D9D9D9 ;
+    border-radius: 5px 5px 5px 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTarefa input{
+    height: 95%;
+    margin: 5%
+}
+
+.addTarefa button{
+    height: 1%;
+    margin: 5%;
+}
+
+
+.tarefa {
+    width: auto;
+    height: 110px;
+    background-color: #D9D9D9;
+    border-radius:5px;
+    margin: 2%;
+    margin-top: 5%;
+    position: relative;
+    cursor: pointer;
+}
+
+.tituloTarefas{ /*Titulo tarefas*/
+    background-color: #6F6565;
+    color: whitesmoke;
+    width: auto;
+    height: 30%;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+}
+
+
+.botaoExcluir {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #D9D9D9;
+    color: rgb(87, 84, 84);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+/* Estilo para a coluna de tarefas */
+.tarefa-textarea {
+    width: 98%;
+    height: 55px;
+    margin: 1%;
+    margin-top: 5%;
+}
+
+

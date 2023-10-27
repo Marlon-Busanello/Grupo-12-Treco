@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Treco</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav class="Barra">
+            
+            <h1 class="Logo">Treco</h1>
+            <div id="opcoesCores">
+                <div class="opcaoCor" style="background-color: #C0C0C0;" onclick="mudarCorFundo('#C0C0C0')"></div>
+                <div class="opcaoCor" style="background-color: #8B0000;" onclick="mudarCorFundo('#8B0000')"></div>
+                <div class="opcaoCor" style="background-color: #87CEEB;" onclick="mudarCorFundo('#87CEEB')"></div>
+                <div class="opcaoCor" style="background-color: #228B22;" onclick="mudarCorFundo('#228B22')"></div>
+                <div class="opcaoCor" style="background-color: #FF8C00;" onclick="mudarCorFundo('#FF8C00')"></div>
+            </div>
+        
+            <button id="mostrarCores" onclick="mostrarOpcoesCores()" class="botaoCores"><img src="css/img/icone_seletor_de_cores.png" alt="" class="imgBotao-cores"></button>
+        
+    </div>
+
+        </nav>
+    </header>
+
+    <div class="backGround">
+    <div class="coluna" id="coluna1" ondrop="soltarTarefa(event, 1)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
+        
+        <h2>A Fazer</h2>
+
+        </div>
+
+        <div>
+            <div class="addTarefa">
+        <input type="text" id="taskName1" placeholder="Nome da tarefa">
+        <button onclick="adicionarTarefa(1)">Adicionar Tarefa</button>
+            </div>
+        <div id="listaDeTarefas1"><!-- Div das tarefas criadas ou movidas para o a fazer-->
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="coluna" id="coluna2" ondrop="soltarTarefa(event, 2)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
+        
+            <h2>Fazendo</h2>
+    
+            </div>
+        <div>
+            <div class="addTarefa">
+            <input type="text" id="taskName2" placeholder="Nome da tarefa">
+            <button onclick="adicionarTarefa(2)">Adicionar Tarefa</button>
+            </div>
+        </div>
+            <div id="listaDeTarefas2"><!-- Div das tarefas criadas ou movidas para o fazendo-->
+        </div>
+
+    </div>
+
+    <div class="coluna" id="coluna3" ondrop="soltarTarefa(event, 3)" ondragover="permitirSoltar(event)">
+        <div class="tituloColunas">
+        
+            <h2>Concluido</h2>
+    
+        </div>
+        <div>
+                <div class="addTarefa">
+            <input type="text" id="taskName3" placeholder="Nome da tarefa">
+            <button onclick="adicionarTarefa(3)">Adicionar Tarefa</button>
+                </div>
+        </div>
+        <div id="listaDeTarefas3"><!-- Div das tarefas criadas ou movidas para o concluido-->
+        </div>
+
+    </div>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
