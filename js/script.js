@@ -93,7 +93,7 @@ document.getElementById(`listaDeTarefas${coluna}`).addEventListener("input", fun
 function carregarTarefasSalvas(coluna) { /* Funcao de carregar tarefas criadas anteriormente  */
 const tarefasData = JSON.parse(localStorage.getItem(`tarefas${coluna}`)) || [];
 
-// Verifique se as tarefas já foram carregadas para evitar duplicações
+
 const listaDeTarefas = document.getElementById(`listaDeTarefas${coluna}`);
 if (listaDeTarefas.childElementCount === 0) {
     tarefasData.forEach(tarefa => {
@@ -133,12 +133,9 @@ if (listaDeTarefas.childElementCount === 0) {
     });
 }
 
-// Carregar a cor de fundo
-const corFundo = localStorage.getItem("corFundo");
-if (corFundo) {
-    document.body.style.backgroundColor = corFundo;
+
 }
-}
+
 
 
 window.addEventListener('load', function () { /*Chama carregar tarefas e carrega cor bg */
